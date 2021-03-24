@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" integrity="sha512-paVHVRRhdoOu1nOXKnqDC1Vka0nh7FAmU3nsM4n2FKxOQTeF6crMdMfkVvEsuaOXZ6oEAVL5+wLbQcule/Xdag==" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="navbar-transparent">
+        <div id="section">Section:<span class="sec-span">1</span></div>
+        <span id="overlay" class="overlay-hide"></span>
+        <button id="open-nav">
+        <i class="open-nav fas fa-bars"></i>
+      </button>
+        <ul id="nav-menu" class="sidebar-hide-menu">
+            <button id="close-nav">
+          <i class="fas fa-times"></i>
+          <!-- <span class="cross">
+            <i class="cross1 fas fa-slash"></i>
+            <i class="cross2 fas fa-slash"></i>
+          </span> -->
+        </button>
+
+            <li>
+                <a href="#welcome-section">About</a>
+                <span class="line line1"></span>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+                <span class="line line2"></span>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+                <span class="line line3"></span>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="welcome-section" class="section sec1">
+        <div class="title-container">
+            <span class="title-box"></span>
+            <h1 class="hero-title">Chibie Code</h1>
+
+            <span class="chev">
+          <a href="#projects">
+            <h3>LEARN MORE</h3>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </span>
+        </div>
+        <video class="hero-video" loading="lazy" src="https://i.imgur.com/pX8oeDD.mp4" id="video" muted loop autoplay></video>
+    </section>
+
+    <section id="projects" class="section sec2">
+        <!-- <div class="projs">
+            <div class="proj-card shadow-md">
+                <a href="https://codepen.io/chibie-code/full/zYKeYde">
+                    <img src="https://i.pinimg.com/originals/32/f6/8c/32f68c384583ccb569d03edd7aa038d5.png" />
+                </a>
+            </div>
+            <div class="proj-card shadow-md rounded-lg">
+                <a href="https://codepen.io/chibie-code/full/BaLeQwP">
+                    <img src="https://i.ibb.co/mtfYjw3/image.png" /></a>
+                </div>
+            </div> -->
+        <!--       <img src="https://i.ibb.co/Q6bHb3K/image.png"> -->
+    </section>
+
+    <section id="contact" class="section sec3">
+        <div class="contact-links">
+            <span>
+          <a
+            id="profile-link"
+            href="https://github.com/chibie-code"
+            target="_blank"
+            >My GitHub</a
+          >
+          <br />
+          <a
+            id="profile-link2"
+            href="https://www.instagram.com/non.cappo/"
+            target="_blank"
+            >My Instagram</a
+          >
+        </span>
+            <span>
+          <a href="https://github.com/chibie-code" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/non.cappo/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+        </div>
+    </section>
+
+    <footer id="footer">
+        Copyright 2021 by Chibie Data. All Rights Reserved.
+        <audio src="https://www.hulkshare.com/embed.php?fn=cqhi5wi8odfk" autoplay loop></audio>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
