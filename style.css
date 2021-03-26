@@ -14,7 +14,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Ubuntu", sans-serif;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 body {
@@ -145,8 +145,7 @@ body {
   grid-row-start: 1;
   grid-row-end: 2;
   
-  grid-col-start: 1;
-  grid-col-end: 2;
+  grid-column: 1/2;
 
   font-family: "Ubuntu", sans-serif;
   position: fixed;
@@ -312,8 +311,7 @@ section {
   grid-row-start: 1;
   grid-row-end: 2;
 
-  grid-col-start: 1;
-  grid-col-end: 2;
+  grid-column: 1/2;
 
   width: 100%;
   background: red;
@@ -336,8 +334,7 @@ section {
   grid-row-start: 2;
   grid-row-end: 3;
   
-  grid-col-start: 1;
-  grid-col-end: 2;
+  grid-column: 1/2;
 
   width: 100%;
   /*   background: #1A8FE3; */
@@ -413,8 +410,7 @@ section {
   grid-row-start: 3;
   grid-row-end: 4;
   
-  grid-col-start: 1;
-  grid-col-end: 2;
+  grid-column: 1/2;
 
   width: 100%;
   position: relative;
@@ -443,10 +439,9 @@ footer {
   grid-row-start: 4;
   grid-row-end: 5;
   
-  grid-col-start: 0;
-  grid-col-end: 1;
+  grid-column: 1/2;
 
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   background: #04080f;
   text-align: right;
