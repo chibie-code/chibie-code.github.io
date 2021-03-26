@@ -5,23 +5,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Chibie Code</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" integrity="sha512-paVHVRRhdoOu1nOXKnqDC1Vka0nh7FAmU3nsM4n2FKxOQTeF6crMdMfkVvEsuaOXZ6oEAVL5+wLbQcule/Xdag==" crossorigin="anonymous" />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-dG5ZzvFUfkBdjYdJbsKdGGh8tOa9fv9wHmiChCFJYHRIW1XgfxN2cGzt2HaEPeunXqbAQXBOJvSBQpGOl0qikw==" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet" />
-<!--     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
-<!--     <script src="jquery-3.6.0.min.js"></script> -->
+    <!--     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!--     <script src="jquery-3.6.0.min.js"></script> -->
     <script src="jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <nav id="navbar" class="navbar-transparent">
-        <div id="section">Section:<span class="sec-span">1</span></div>
+        <div id="section-display">Section:<span class="sec-span">1</span></div>
         <span id="overlay" class="overlay-hide"></span>
         <button id="open-nav">
         <i class="open-nav fas fa-bars"></i>
@@ -66,17 +65,32 @@
     </section>
 
     <section id="projects" class="section sec2">
-        <!-- <div class="projs">
+        <div class="projs">
+            <div class="proj-card shadow-md">
+                <a href="https://objective-bose-01054d.netlify.app/">
+                    <img src="./images/react-todoapp.png" class="rounded-md" />
+                </a>
+                <div class="card-label">
+                    <h3>Simple React TodoApp</h3>
+                </div>
+            </div>
             <div class="proj-card shadow-md">
                 <a href="https://codepen.io/chibie-code/full/zYKeYde">
-                    <img src="https://i.pinimg.com/originals/32/f6/8c/32f68c384583ccb569d03edd7aa038d5.png" />
+                    <img src="https://i.pinimg.com/originals/32/f6/8c/32f68c384583ccb569d03edd7aa038d5.png" class="rounded-md" />
                 </a>
-            </div>
-            <div class="proj-card shadow-md rounded-lg">
-                <a href="https://codepen.io/chibie-code/full/BaLeQwP">
-                    <img src="https://i.ibb.co/mtfYjw3/image.png" /></a>
+                <div class="card-label">
+                    <h3>Login page</h3>
                 </div>
-            </div> -->
+            </div>
+            <div class="proj-card shadow-md">
+                <a href="https://codepen.io/chibie-code/full/BaLeQwP">
+                    <img src="https://i.ibb.co/mtfYjw3/image.png" class="rounded-md" />
+                </a>
+                <div class="card-label">
+                    <h3>JS Documentation page</h3>
+                </div>
+            </div>
+        </div>
         <!--       <img src="https://i.ibb.co/Q6bHb3K/image.png"> -->
     </section>
 

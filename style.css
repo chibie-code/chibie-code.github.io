@@ -14,7 +14,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Ubuntu", sans-serif;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 body {
@@ -23,8 +23,9 @@ body {
   left: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 100vh auto auto;
+  grid-template-rows: 100vh auto auto auto;
   gap: 0px 0px;
+  /* border: 3px solid lime; */
 }
 
 .title-container {
@@ -143,6 +144,10 @@ body {
 #navbar {
   grid-row-start: 1;
   grid-row-end: 2;
+  
+  grid-col-start: 1;
+  grid-col-end: 2;
+
   font-family: "Ubuntu", sans-serif;
   position: fixed;
   width: 100%;
@@ -165,13 +170,13 @@ body {
 #section-display {
   width: 100%;
   height: 100%;
+  visibility: hidden;
 }
 .sec-span {
   width: 100%;
   height: 100%;
   color: white;
   font-size: 15px;
-  visibility: hidden;
 }
 
 #overlay {
@@ -299,13 +304,17 @@ body {
 }
 
 section {
-  padding: 8rem;
+  padding: 5px;
   font-size: 20px;
 }
 
 #welcome-section {
   grid-row-start: 1;
   grid-row-end: 2;
+
+  grid-col-start: 1;
+  grid-col-end: 2;
+
   width: 100%;
   background: red;
   position: relative;
@@ -326,6 +335,10 @@ section {
 #projects {
   grid-row-start: 2;
   grid-row-end: 3;
+  
+  grid-col-start: 1;
+  grid-col-end: 2;
+
   width: 100%;
   /*   background: #1A8FE3; */
   /*   background: #FF0022; */
@@ -339,14 +352,22 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 10rem;
+  gap: 2rem;
 }
 .proj-card {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 17rem;
+  min-width: 270px;
+  overflow: hidden;
+  margin: 1rem;
   /*   background: #04080F;
   background: #424242; */
-  background: #484a83;
+  /* background: #484a83; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .proj-card img {
   height: 100%;
@@ -358,12 +379,47 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.proj-card:hover{
+  border: solid 3px lime;
+}
+.card-label{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  z-index: 0;
+}
+.card-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(4, 8, 15, 0.6);
+  /* border: 1px solid lime; */
+  z-index: -1;
+}
+.card-label h3{
+  color: white;
+}
 
 #contact {
   grid-row-start: 3;
   grid-row-end: 4;
+  
+  grid-col-start: 1;
+  grid-col-end: 2;
+
   width: 100%;
   position: relative;
+  padding: 3rem;
+
   z-index: 0;
 }
 .contact-links {
@@ -386,7 +442,11 @@ section {
 footer {
   grid-row-start: 4;
   grid-row-end: 5;
-  font-size: 10px;
+  
+  grid-col-start: 0;
+  grid-col-end: 1;
+
+  font-size: 20px;
   color: white;
   background: #04080f;
   text-align: right;

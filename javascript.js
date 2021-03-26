@@ -1,8 +1,8 @@
 const lines = document.querySelectorAll(".fade-in");
 const sections = document.querySelectorAll("section");
 const options = {
-    threshold: 1,
-    rootMargin: "75% 0% 10% 0%",
+    threshold: 0,
+    rootMargin: "-70% 0px -100px 0px",
 };
 
 $(document).ready(() => {
@@ -33,14 +33,16 @@ const lineToggle = (entry) => {
         document.querySelector(".line1").classList.add("show-line");
         document.querySelector(".line2").classList.remove("show-line");
         document.querySelector(".line3").classList.remove("show-line");
-    } else if (entry.target.id === "projects") {
-        document.querySelector(".line2").classList.add("show-line");
-        document.querySelector(".line1").classList.remove("show-line");
-        document.querySelector(".line3").classList.remove("show-line");
-    } else {
+    } else if (entry.target.id === "contact") {
         document.querySelector(".line3").classList.add("show-line");
         document.querySelector(".line2").classList.remove("show-line");
         document.querySelector(".line1").classList.remove("show-line");
+    }
+    // if (entry.target.id === "projects") {
+    else {
+        document.querySelector(".line2").classList.add("show-line");
+        document.querySelector(".line1").classList.remove("show-line");
+        document.querySelector(".line3").classList.remove("show-line");
     }
 };
 
@@ -72,39 +74,42 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
         console.log("ID: " + entry.target.id);
         document.querySelector(".sec-span").innerHTML = ": " + entry.target.id;
         entry.target.classList.add("appear");
-        lineToggle(entry);
-        navToggle(entry);
+        console.log(`%c${entry.target.id}`, "color: lime");
+        // lineToggle(entry);
+
         // appearOnScroll.unobserve(entry.target);
 
         if (!entry.isIntersecting) {
             entry.target.classList.remove("appear");
             // appearOnScroll.unobserve(entry.target);
             return;
+        } else {
+            console.log(`%cIS INTERSECTING ${entry.target.id}`, "color: yellow");
+            lineToggle(entry);
         }
+
         const currentY = entry.boundingClientRect.y;
         const currentRatio = entry.intersectionRatio;
         const isIntersecting = entry.isIntersecting;
 
+
         // Scrolling down/up
         if (currentY < previousY) {
+            // console.clear();
             if (currentRatio > previousRatio && isIntersecting) {
                 console.log("Scrolling up enter " + entry.target.id);
                 lineToggle(entry);
-                navToggle(entry);
             } else {
                 console.log("Scrolling up leave " + entry.target.id);
                 lineToggle(entry);
-                navToggle(entry);
             }
         } else if (currentY > previousY && isIntersecting) {
             if (currentRatio < previousRatio) {
                 console.log("Scrolling down leave " + entry.target.id);
                 lineToggle(entry);
-                navToggle(entry);
             } else {
                 console.log("Scrolling down enter " + entry.target.id);
                 lineToggle(entry);
-                navToggle(entry);
             }
         }
 
