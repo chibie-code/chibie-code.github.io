@@ -342,6 +342,8 @@ section {
   /*   background: #DCEDFF; */
   background: #050c16;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .projs {
   width: 100%;
@@ -349,14 +351,15 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0.5rem;
+  place-items: center;
+  gap: 2rem;
 }
 .proj-card {
-  width: auto;
+  width: minmax(300px, 1fr);
   height: 20rem;
-  min-width: 270px;
+  margin: 3rem;
+
   overflow: hidden;
-  margin: 1rem;
   /*   background: #04080F;
   background: #424242; */
   /* background: #484a83; */
@@ -367,7 +370,7 @@ section {
   position: relative;
 }
 .proj-card img {
-  height: 100%;
+  /* height: 100%; */
   width: auto;
   height: auto;
   object-fit: cover;
@@ -405,6 +408,65 @@ section {
 .card-label h3{
   color: white;
 }
+.marquee-container{
+  width: 100%;
+  height: auto;
+  background: #373F47;
+  background: #0a172b;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.marquee{
+  color: white;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  flex-wrap: no-wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0rem; */
+  white-space: nowrap;
+  place-items: center;
+  overflow: hidden;
+}
+.skills{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: marquee 10s linear infinite;
+}
+.skills:hover{
+  /* animation-play-state: paused;   */
+}
+
+.skills a{
+  height: 100%;
+  width: 100%;
+  /* animation-play-state: paused; */
+  /* background: red; */
+}
+.skills li{
+  width: 10rem;
+  height: 100%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills img{
+  max-height: 3.5rem;
+  transition: transform 0.1s ease-in-out;
+}
+.skills img:hover{
+  transition.delay: 5s;
+  transform: scale(1.2);
+}
+@keyframes marquee {
+  0% { transform: translate(0);}
+  100% { transform: translate(-60rem);}
+}
 
 #contact {
   grid-row-start: 3;
@@ -414,14 +476,23 @@ section {
 
   width: 100%;
   position: relative;
-  padding: 3rem;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
+  justify-content: center;
+  align-items: center;
+  
   z-index: 0;
 }
+
 .contact-links {
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   color: #dcedff;
+  padding: 3rem;
   z-index: 0;
 }
 #contact::after {
