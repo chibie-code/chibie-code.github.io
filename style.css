@@ -352,7 +352,7 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   place-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 .proj-card {
   width: minmax(300px, 1fr);
